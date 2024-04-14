@@ -78,6 +78,11 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
+1. Pada kasus BambangShop, sebuah trait untuk Observer tidak terlalu diperlukan karena tidak ada variasi perilaku yang diharapkan dari observer. Sebagai alternatif, sebuah struct Model yang mencakup data dan perilaku yang diperlukan sudah cukup memadai.
+2. Agar keunikan ID atau URL dari customer terjaga, maka menggunakan Vec (list) sudah cukup. Namun, DashMap (map/dictionary) lebih disarankan karena keunggulan dalam kecepatan akses dan manipulasi data, serta kemudahan dalam pengecekan keunikan ID atau URL.
+3. DashMap yang digunakan untuk variabel statis SUBSCRIBERS adalah pilihan yang tepat karena memungkinkan akses ke data yang sama dari mana pun dalam aplikasi dan menjaga keamanan konkurensi. Implementasi Singleton pattern mungkin memungkinkan, tetapi tidak mutlak diperlukan karena DashMap sudah menyediakan fungsionalitas yang diperlukan untuk pengelolaan keamanan konkurensi. Jadi, DashMap adalah pilihan yang tepat untuk SUBSCRIBERS dalam BambangShop.
+
 #### Reflection Publisher-2
+
 
 #### Reflection Publisher-3
