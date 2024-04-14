@@ -84,5 +84,9 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. Pada prinsip Single Responsibility Principle menekankan kebutuhan akan class yang fokus pada satu tanggung jawab. Oleh karena itu, pemisahan "Service" dan "Repository" dari Model diperlukan agar Model hanya fokus pada struktur data. Ini memastikan Model hanya bertanggung jawab atas representasi data, sesuai dengan prinsip SRP.
+2. Jika hanya menggunakan Model tanpa memisahkan tanggung jawabnya, akan mengakibatkan model harus menangani representasi data dan business logic. Hal ini dapat meningkatkan kompleksitas kode, sulit dalam perawatan, dan membuat interaksi antar-model menjadi rumit dan terikat. Misalnya, jika sebuah Product harus memberi tahu Subscriber tentang perubahan, maka akan terjadi interaksi langsung antara keduanya tanpa pemisahan yang jelas.
+3. Postman sangat berguna dalam pengujian program dengan kemampuannya untuk mengirim respons ke endpoint API. Fitur pengiriman permintaan HTTP, pengujian otomatis, dan pengelolaan environment variables sangat membantu dalam memverifikasi perilaku endpoint API, menguji berbagai kondisi, dan memudahkan penyesuaian antar lingkungan seperti development, staging, dan production saat menguji API.
+
 
 #### Reflection Publisher-3
