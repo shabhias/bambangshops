@@ -90,3 +90,7 @@ This is the place for you to write reflections:
 
 
 #### Reflection Publisher-3
+
+1. Pada tutorial ini, kita menggunakan variasi model Push dari Observer Pattern. Hal ini terlihat dari  request HTTP POST untuk mengirimkan notifikasi kepada pelanggan yang telah berlangganan. Notifikasi ini dipicu oleh create, promote, atau delete produk.
+2. Apabila kita menggunakan variasi Pull dari Observer Pattern, Salah satu kelebihannya adalah mengurangi penggunaan sumber daya jaringan dan komputasi karena pelanggan hanya mengambil data saat diperlukan. Mereka juga memiliki kendali penuh atas timing pengambilan data. Namun, kekurangannya adalah pelanggan harus secara aktif meminta pembaruan, yang dapat menyebabkan keterlambatan dalam mendapatkan informasi terbaru. Implementasi Model Pull juga membutuhkan penambahan logika di sisi pelanggan untuk mengelola permintaan dan pembaruan data.
+3. Apabila kita memilih untuk tidak menggunakan multi-threading dalam proses notifikasi, proses akan dilakukan secara berurutan dengan setiap notifikasi diproses satu per satu. Ini berarti kita harus menunggu hingga notifikasi sebelumnya selesai sebelum memproses yang berikutnya. Jika ada banyak notifikasi yang harus dikirim, ini dapat mengakibatkan keterlambatan dan delay dalam respons. Penggunaan multi-threading dapat mempercepat proses notifikasi dengan memprosesnya secara paralel, meningkatkan responsivitas aplikasi, dan lebih efisien ketika ingin mengirim banyak notifikasi.
